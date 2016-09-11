@@ -1,0 +1,45 @@
+@charset "UTF-8";
+head, body {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: inline; }
+
+ul li {
+  text-align: center;
+  display: inline-block; }
+
+.container {
+  max-width: 840px; }
+
+/* jumbotron */
+.jumbotron {
+  padding: 50px 30px 40px 30px;
+  margin: 0; }
+
+.jumbotron .container {
+  max-width: 840px; }
+
+.img-rounded {
+  height: 250px;
+  margin: 30px; }
+
+img.logo {
+  height: 25px;
+  padding-right: 15px;
+  margin: 0 auto; }
+
+/* skills */
+.progress {
+  margin: 0 auto; }
+
+@media (max-width: 991px) {
+  .img-rounded {
+    display: none !important; } }
+/*ппппп*/
+
+/*# sourceMappingURL=main.css.map */

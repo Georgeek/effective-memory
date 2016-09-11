@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>React</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <div id="root">Загрузка...</div>
+
+        <script src="lib/react.js"></script>
+        <script src="lib/react-dom.js"></script>
+        <script src="lib/babel-browser.min.js"></script>
+
+<!--         <script type="text/babel">
+            function Hero(props) {
+                return (
+                    <div className="container">
+                        <img src={props.imageUrl} />
+                        <h1>{props.title}</h1>
+                        <p>{props.subtitle}</p>
+                    </div>
+                );
+            }
+
+            ReactDOM.render(
+                <div>
+                    <Hero title="React"
+                        subtitle="Библиотека для создания пользовательских интерфейсов"
+                        imageUrl="https://facebook.github.io/react/img/logo.svg"/>
+                    <Hero title="Angular 2"
+                        subtitle="Один фреймворк"
+                        imageUrl="https://angular.io/resources/images/logos/angular2/angular.svg"/>
+                </div>,
+            document.getElementById('root'));
+        </script> -->
+         <script src="app.jsx" type="text/babel"></script>    
+    
+    </body>
+</html>

@@ -1,0 +1,176 @@
+html, body {
+  font-family: "Oxygen", sans-serif; 
+  font-weight: 300; 
+  margin: 0;
+  padding: 0;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/projects/bolt-network/diagmonds_@2X.png);
+  background-size: 141px 142px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  max-width: 970px;
+}
+
+/* jumbotron header*/
+.jumbotron {
+	background-color: #000000;
+	padding-bottom: 30px;
+	height: 600px;
+}
+.header img {
+	height: 35px;
+	text-align: left;
+}
+.header ul {
+	list-style: none;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+}
+.header li {
+	color: #fff;
+	font-size: 16px;
+	width: 50%;
+	margin-right: 30px;
+	display: inline;
+}
+.btn {
+	color: #0393FF;
+	background: transparent;
+	padding: 8px 20px;
+	border: 1px solid #0393FF;
+	border-radius: 2px;
+	text-decoration: none;
+}
+.btn:hover {
+	cursor: pointer; 
+  	transition: background .2s;
+  	background-color: #0393FF;
+  	color: #fff;
+}
+
+/* jumbotron main*/
+.main {
+	text-align: center;
+}
+.main h1 {
+	color: #fff;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	font-weight: 300;
+}
+.form-inline {
+	margin-top: 80px;
+}
+.main .form-inline button {
+	margin: 0;
+}
+#search {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid #fff;
+	width: 400px;
+	margin: 0 20px;
+	font-size: 18px;
+	color: #fff;
+	padding: 3px 10px ;
+}
+#search:hover {
+	border-bottom: 1px solid #0393FF;
+}
+#search:focus {
+	border-bottom: 1px solid #0393FF;
+	box-shadow: 0px 0px 0px;
+	outline: 0px;
+}
+
+/* supporting */
+.supporting {
+  text-align: center;
+}
+.supporting h2 {
+	color: #058EFF;
+	font-size: 32px;
+}
+.supporting p {
+	color: #fff;
+	font-size: 18px;
+}
+.supporting .thumbnail {
+	border: 0;
+	background: transparent;
+	padding: 0;
+}
+
+/* feature */
+.feature {
+  background: url(https://s3.amazonaws.com/codecademy-content/projects/bolt-network/feature.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 350px;
+  text-align: center;
+}
+.feature .container {
+	padding-top: 120px;
+}
+.feature h2 {
+	color: #058EFF;
+	font-size: 32px;
+}
+.feature p {
+	color: #fff;
+	font-size: 18px;
+}
+
+
+/* footer */
+.footer {
+	background-color: #000000;
+	padding: 60px 0;
+	color: #fff;
+}
+.footer h3 {
+	font-size: 18px;
+	font-weight: 300;
+}
+.footer ul {
+	list-style: none;
+	padding: 0;
+}
+.footer ul li {
+	color: #058EFF;
+}
+
+@media (max-width: 770px) {
+	.pull-right {
+		margin: 30px auto;
+		width: 100%;
+	}
+	.header ul {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	.header li {
+		float: left;
+		line-height: 38px;
+		margin: 0;
+		width: 50%;
+		text-align: center;
+	}
+	.header li a {
+		width: 100%;
+	}
+	#search {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+}

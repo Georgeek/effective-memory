@@ -1,0 +1,169 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px; 
+  padding: 0 10px; 
+}
+
+
+/* Header */
+.header {
+  background: url(https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px;
+  text-align: center; 
+}
+
+.header .container {
+  position: relative;
+  top: 200px;
+}
+
+.header h1 {
+  font-size: 80px;
+  line-height: 100px; 
+  margin-top: 0;
+  margin-bottom: 80px;
+  color: #E8E6E7;
+  text-transform: uppercase;
+}
+
+@media (min-width:850px) {
+  .header h1 {
+    font-size: 120px;
+  }
+}
+
+.header p {
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: #E8E6E7;
+  text-transform: uppercase;
+  
+}
+
+.btn {
+  background-color: #212121;
+  color: #fff;
+
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #453EC7;
+  cursor: pointer; 
+  transition: background .5s;  
+}
+
+
+/* Nav */
+.nav {
+  background-color: #212121;
+}
+.nav ul li {
+  list-style: none;
+  padding: 20px 10px;
+  text-align: center; 
+  color: #fff;
+
+  display: inline-block;
+}
+.nav ul li:hover {
+  background: #453EC7;
+  cursor: pointer; 
+  transition: background .5s; 
+}
+.nav ul {
+  margin: 0;
+}
+
+/* Main */
+.main .container {
+  margin: 80px auto;
+}
+.main img {
+  float: left;
+  height: 220px;
+  width: 220px;
+  margin: 15px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  height: 400px; 
+  text-align: right;
+    background: url(https://pp.vk.me/c630821/v630821756/bc7a/1i2bzDMXJNg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+  text-align: center;  
+}
+
+.jumbotron .container {
+  position: relative;
+  top: 220px;
+}
+.jumbotron h3 {
+  text-align: right;
+  font-size: 30px;
+  line-height: 100px; 
+  margin: 0;
+  color: #E8E6E7;
+}
+.jumbotron .container p {
+  text-align: right;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  color: #E8E6E7; 
+}
+.jumbotron .btn {
+  float: right;
+}
+
+/* Footer */
+.footer { 
+  padding: 20px 10px;
+  font-size: 14px;
+  background-color: #212121;
+}
+.footer p {
+  margin: 0;
+  color: #E8E6E7;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 50px;
+    line-height: 64px;
+  }
+
+  .main, .jumbotron {
+    padding: 0 30px;
+  }
+
+  .main img {
+    width: 100%;
+  }
+}

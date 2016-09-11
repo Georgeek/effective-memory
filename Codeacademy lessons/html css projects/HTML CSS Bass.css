@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+	max-width: 970px;
+}
+/* jumbotron header*/
+.jumbotron {
+	background: url(https://s3.amazonaws.com/codecademy-content/projects/bass/bg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 550px;
+	margin: 0 auto;
+}
+.header {
+	color: #fff;
+}
+.header img {
+	height: 70px;
+}
+
+.header li {
+	font-size: 16px;
+	margin-left: 13px;
+	margin-top: 40px;
+	display: inline-block;
+}
+.header a {
+	color: #fff;
+}
+.btn {
+	background-color: #FF003D;
+	padding: 8px 30px;
+	border: 1px solid #FF003D;
+	border-radius: 1px;
+	text-decoration: none;
+}
+.btn:hover {
+	cursor: pointer;
+  	background-color: #FF003D;
+  	border: 1px solid #FF003D;
+  	color: #000;
+}
+/* jumbotron main */
+.main {
+	color: #fff;
+}
+.main h1 {
+	padding-top: 60px;
+}
+/* supporting - 1, 2, 3 */
+.supporting-1, 
+.supporting-3 {
+	background-color: #161718;
+}
+.supporting-2 {
+	background-color: #000;
+}
+.supporting-1 img,
+.supporting-2 img,
+.supporting-3 img {
+	height: 300px;
+}
+.supporting-1,
+.supporting-2,
+.supporting-3,
+.supporting-4 {
+	margin: 0 auto;
+	padding: 100px 40px;
+	color: #fff;
+}
+/* supporting - 4 */
+.supporting-4 {
+	text-align: center;
+	background: url(https://s3.amazonaws.com/codecademy-content/projects/bass/feature.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* footer */
+.footer {
+	margin: 0 auto;
+	background-color: #000;
+	color: #fff;
+	padding: 50px 0 80px 0;
+}
+.footer a {
+	text-decoration: none;
+	color: #aaa;
+	padding: 5px 0;
+}
+.footer ul {
+	padding: 0;
+}
+.footer li {
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+@media (max-width: 992px) {
+	.col-md-6 img {
+		width: 100%;
+	}
+	
+}

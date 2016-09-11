@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery tutorial 5 and 6</title>
+	<link rel="stylesheet" href="jQ tut 5-6.css">
+</head>
+<body>
+	<h1>jQuery tutorial 5 and 6</h1>
+	<div class="tab-panels">
+		<ul class="tabs">
+			<li rel="panel1" class="active">panel1</li>
+			<li rel="panel2">panel2</li>
+			<li rel="panel3">panel3</li>
+			<li rel="panel4">panel4</li>
+		</ul>
+
+		<div id="panel1" class="panel active">
+			content1<br/>
+			content1<br/>
+			content1<br/>
+			content1<br/>
+		</div>
+		<div id="panel2" class="panel">
+			content2<br/>
+			content2<br/>
+			content2<br/>
+			content2<br/>
+		</div>
+		<div id="panel3" class="panel">
+			content3<br/>
+			content3<br/>
+			content3<br/>
+			content3<br/>
+		</div>
+		<div id="panel4" class="panel">
+			content4<br/>
+			content4<br/>
+			content4<br/>
+			content4<br/>
+		</div>
+	</div>
+
+	<div class="tab-panels">
+		<ul class="tabs">
+			<li rel="panel5" class="active">panel15</li>
+			<li rel="panel6">panel6</li>
+			<li rel="panel7">panel7</li>
+			<li rel="panel8">panel8</li>
+		</ul>
+
+		<div id="panel5" class="panel active">
+			content5<br/>
+			content5<br/>
+			content5<br/>
+			content5<br/>
+		</div>
+		<div id="panel6" class="panel">
+			content6<br/>
+			content6<br/>
+			content6<br/>
+			content6<br/>
+		</div>
+		<div id="panel7" class="panel">
+			content7<br/>
+			content7<br/>
+			content7<br/>
+			content7<br/>
+		</div>
+		<div id="panel8" class="panel">
+			content8<br/>
+			content8<br/>
+			content8<br/>
+			content8<br/>
+		</div>
+	</div>
+	
+
+	<script src="jquery-2.2.4.min.js"></script>
+	<script>
+		
+		// как все работает - пусть и некрасиво в коде, но процесс ясен
+		// $(function () {
+		// 	 /* body... */ 
+		// 	 $('.tab-panels .tabs li').on('click', function () {
+		// 	 	 $('tab-panels .tabs li.active').removeClass('active'); // убираем выделение с текущего класса
+		// 	 	 $(this).addClass('active'); // добавляем выделение на выбранный класс
+
+		// 	 	 /* опередляем какую панель показываем*/
+		// 	 	 var panelToShow = $(this).attr('rel'); // this относится тут к .tab-panels .tabs li
+		// 	 	 // после этого проверяем что на клик срабатывает нужная панель alert(panelToShow);
+
+		// 	 	 //спрятать текущую панель
+		// 	 	 $('.tab-panels .panel.active').slideUp(200, function () {
+		// 	 	 	 $(this).removeClass('active'); // удаляет текущий класс .tab-panels .panel.active. Без этого панели будут заменяться друг другом, иногда складываться вместе
+
+		// 	 	 	 /* bчерез 200мс срабатывает функция callback -> проверяем alert() */
+		// 	 	 	 $('#' + panelToShow).slideDown(300, function () {
+		// 	 	 	 	 /* без этой функции панели суммируются и опускаются вниз*/
+		// 	 	 	 	 $(this).addClass('active'); //this тут - это panelToShow. А все это callback hell 
+		// 	 	 	 });
+		// 	 	 	 // # = id
+		// 	 	 });
+		// 	 });
+		// })
+		// !!!!! ВАЖНО!!!! ('.tab-panels .tabs li') - парсинг ищет по всему сайту и это плохо по 2м причинам
+		// при клике ищет данный параметр по всей странице и повторяет это же операцию если встретит еще раз (у нас 2 примера в коде)
+		// Если мы добавим панели с тем же классом, то код свернет ВСЕ панели и оставит только одну. Ниже приведен код решения
+
+		// а вот как красиво
+		$(function () {
+			
+			$('.tab-panels .tabs li').on('click', function () {
+				var panel = $(this).closest('.tab-panels'); // переменная для поиска внутри одной группы
+				
+				panel.find('.tabs li.active').removeClass('active');  // ищет внутри одной группы tabs li.active
+				$(this).addClass('active'); 
+				 
+				// определяем панель для показа
+				var panelToShow = $(this).attr('rel');
+			 	
+			 	// прячем текущую панель
+			 	panel.find('.panel.active').slideUp(200, showNextPanel); // см выше :)
+
+			 	//показываем следующую панель
+			 	function showNextPanel() {
+				 	$(this).removeClass('active'); 
+				 	
+				 	$('#' + panelToShow).slideDown(300, function () {
+			 	 		$(this).addClass('active'); 
+			 		});
+	 	 
+	 			}
+
+			});
+
+
+		});
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
