@@ -9,14 +9,14 @@ html, body {
   justify-content: space-between; }
 
 header {
-  margin: 10px;
-  background: #E8E8E8; }
+  margin: 10px; }
   header img {
     height: 80px; }
   header .title {
     text-align: center; }
 
 section {
+  background: #09B8EF;
   margin: 10px; }
   section video {
     width: 100%; }
@@ -26,8 +26,7 @@ section {
 footer {
   margin: 10px; }
   footer .carousel {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64); }
+    position: relative; }
   footer .carousel-inner {
     position: relative;
     overflow: hidden;
