@@ -1,0 +1,188 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$main_data__line_fio_name = 'main-data__line-FIO';
+$main_data__line_fio_x = 0px;
+$main_data__line_fio_y = 0px;
+$main_data__line_fio_offset_x = 0px;
+$main_data__line_fio_offset_y = 0px;
+$main_data__line_fio_width = 659px;
+$main_data__line_fio_height = 59px;
+$main_data__line_fio_total_width = 1367px;
+$main_data__line_fio_total_height = 193px;
+$main_data__line_fio_image = '../images/sprites/lines.png';
+$main_data__line_fio = 0px 0px 0px 0px 659px 59px 1367px 193px '../images/sprites/lines.png' 'main-data__line-FIO';
+$main_data__line_birth_name = 'main-data__line-birth';
+$main_data__line_birth_x = 0px;
+$main_data__line_birth_y = 67px;
+$main_data__line_birth_offset_x = 0px;
+$main_data__line_birth_offset_y = -67px;
+$main_data__line_birth_width = 634px;
+$main_data__line_birth_height = 59px;
+$main_data__line_birth_total_width = 1367px;
+$main_data__line_birth_total_height = 193px;
+$main_data__line_birth_image = '../images/sprites/lines.png';
+$main_data__line_birth = 0px 67px 0px -67px 634px 59px 1367px 193px '../images/sprites/lines.png' 'main-data__line-birth';
+$main_data__line_city_name = 'main-data__line-city';
+$main_data__line_city_x = 0px;
+$main_data__line_city_y = 134px;
+$main_data__line_city_offset_x = 0px;
+$main_data__line_city_offset_y = -134px;
+$main_data__line_city_width = 599px;
+$main_data__line_city_height = 59px;
+$main_data__line_city_total_width = 1367px;
+$main_data__line_city_total_height = 193px;
+$main_data__line_city_image = '../images/sprites/lines.png';
+$main_data__line_city = 0px 134px 0px -134px 599px 59px 1367px 193px '../images/sprites/lines.png' 'main-data__line-city';
+$main_data__line_mail_name = 'main-data__line-mail';
+$main_data__line_mail_x = 667px;
+$main_data__line_mail_y = 0px;
+$main_data__line_mail_offset_x = -667px;
+$main_data__line_mail_offset_y = 0px;
+$main_data__line_mail_width = 700px;
+$main_data__line_mail_height = 9px;
+$main_data__line_mail_total_width = 1367px;
+$main_data__line_mail_total_height = 193px;
+$main_data__line_mail_image = '../images/sprites/lines.png';
+$main_data__line_mail = 667px 0px -667px 0px 700px 9px 1367px 193px '../images/sprites/lines.png' 'main-data__line-mail';
+$main_data__line_skype_name = 'main-data__line-skype';
+$main_data__line_skype_x = 667px;
+$main_data__line_skype_y = 17px;
+$main_data__line_skype_offset_x = -667px;
+$main_data__line_skype_offset_y = -17px;
+$main_data__line_skype_width = 700px;
+$main_data__line_skype_height = 9px;
+$main_data__line_skype_total_width = 1367px;
+$main_data__line_skype_total_height = 193px;
+$main_data__line_skype_image = '../images/sprites/lines.png';
+$main_data__line_skype = 667px 17px -667px -17px 700px 9px 1367px 193px '../images/sprites/lines.png' 'main-data__line-skype';
+$sp_lines_width = 1367px;
+$sp_lines_height = 193px;
+$sp_lines_image = '../images/sprites/lines.png';
+$sp_lines_sprites = $main_data__line_fio $main_data__line_birth $main_data__line_city $main_data__line_mail $main_data__line_skype;
+$sp_lines = 1367px 193px '../images/sprites/lines.png' $sp_lines_sprites;
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+// The list formatted variables are intended for mixins like `retinaSprite` and `retinaSprites`.
+
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+
+// The `retinaSprite` mixin sets up rules and a media query for a sprite/retina sprite.
+// It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon_home_group = 'icon-home' $icon_home $icon_home_2x;
+//
+// .icon-home {
+//     retinaSprite($icon_home_group)
+// }
+
+
+spriteBackgroundSize($sprite) {
+	background-size $sprite[6] $sprite[7]
+}
+
+retinaSprite($retina_group) {
+	$normal_sprite = $retina_group[1]
+	$retina_sprite = $retina_group[2]
+	sprite($normal_sprite)
+
+	@media (-webkit-min-device-pixel-ratio: 2),
+				 (min-resolution: 192dpi) {
+		spriteImage($retina_sprite)
+		spriteBackgroundSize($normal_sprite)
+	}
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
+
+// The `retinaSprites` mixin generates a CSS rule and media query for retina groups
+// This yields the same output as CSS retina template but can be overridden in Stylus
+//
+// retinaSprites($retina_groups)
+
+retinaSprites($retina_groups) {
+	for $retina_group in $retina_groups {
+		$sprite_name = $retina_group[0];
+		.{$sprite_name} {
+			retinaSprite $retina_group
+		}
+	}
+}

@@ -1,0 +1,188 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$about_ellipse_0_name = 'about-ellipse-0';
+$about_ellipse_0_x = 0px;
+$about_ellipse_0_y = 0px;
+$about_ellipse_0_offset_x = 0px;
+$about_ellipse_0_offset_y = 0px;
+$about_ellipse_0_width = 41px;
+$about_ellipse_0_height = 45px;
+$about_ellipse_0_total_width = 90px;
+$about_ellipse_0_total_height = 80px;
+$about_ellipse_0_image = '../images/sprites/icons.png';
+$about_ellipse_0 = 0px 0px 0px 0px 41px 45px 90px 80px '../images/sprites/icons.png' 'about-ellipse-0';
+$about_ellipse_1_name = 'about-ellipse-1';
+$about_ellipse_1_x = 49px;
+$about_ellipse_1_y = 0px;
+$about_ellipse_1_offset_x = -49px;
+$about_ellipse_1_offset_y = 0px;
+$about_ellipse_1_width = 41px;
+$about_ellipse_1_height = 45px;
+$about_ellipse_1_total_width = 90px;
+$about_ellipse_1_total_height = 80px;
+$about_ellipse_1_image = '../images/sprites/icons.png';
+$about_ellipse_1 = 49px 0px -49px 0px 41px 45px 90px 80px '../images/sprites/icons.png' 'about-ellipse-1';
+$js_arrow_name = 'js-arrow';
+$js_arrow_x = 58px;
+$js_arrow_y = 53px;
+$js_arrow_offset_x = -58px;
+$js_arrow_offset_y = -53px;
+$js_arrow_width = 17px;
+$js_arrow_height = 14px;
+$js_arrow_total_width = 90px;
+$js_arrow_total_height = 80px;
+$js_arrow_image = '../images/sprites/icons.png';
+$js_arrow = 58px 53px -58px -53px 17px 14px 90px 80px '../images/sprites/icons.png' 'js-arrow';
+$skill_checkbox_0_name = 'skill-checkbox-0';
+$skill_checkbox_0_x = 31px;
+$skill_checkbox_0_y = 53px;
+$skill_checkbox_0_offset_x = -31px;
+$skill_checkbox_0_offset_y = -53px;
+$skill_checkbox_0_width = 19px;
+$skill_checkbox_0_height = 18px;
+$skill_checkbox_0_total_width = 90px;
+$skill_checkbox_0_total_height = 80px;
+$skill_checkbox_0_image = '../images/sprites/icons.png';
+$skill_checkbox_0 = 31px 53px -31px -53px 19px 18px 90px 80px '../images/sprites/icons.png' 'skill-checkbox-0';
+$skill_checkbox_1_name = 'skill-checkbox-1';
+$skill_checkbox_1_x = 0px;
+$skill_checkbox_1_y = 53px;
+$skill_checkbox_1_offset_x = 0px;
+$skill_checkbox_1_offset_y = -53px;
+$skill_checkbox_1_width = 23px;
+$skill_checkbox_1_height = 27px;
+$skill_checkbox_1_total_width = 90px;
+$skill_checkbox_1_total_height = 80px;
+$skill_checkbox_1_image = '../images/sprites/icons.png';
+$skill_checkbox_1 = 0px 53px 0px -53px 23px 27px 90px 80px '../images/sprites/icons.png' 'skill-checkbox-1';
+$sp_icons_width = 90px;
+$sp_icons_height = 80px;
+$sp_icons_image = '../images/sprites/icons.png';
+$sp_icons_sprites = $about_ellipse_0 $about_ellipse_1 $js_arrow $skill_checkbox_0 $skill_checkbox_1;
+$sp_icons = 90px 80px '../images/sprites/icons.png' $sp_icons_sprites;
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+// The list formatted variables are intended for mixins like `retinaSprite` and `retinaSprites`.
+
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+
+// The `retinaSprite` mixin sets up rules and a media query for a sprite/retina sprite.
+// It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon_home_group = 'icon-home' $icon_home $icon_home_2x;
+//
+// .icon-home {
+//     retinaSprite($icon_home_group)
+// }
+
+
+spriteBackgroundSize($sprite) {
+	background-size $sprite[6] $sprite[7]
+}
+
+retinaSprite($retina_group) {
+	$normal_sprite = $retina_group[1]
+	$retina_sprite = $retina_group[2]
+	sprite($normal_sprite)
+
+	@media (-webkit-min-device-pixel-ratio: 2),
+				 (min-resolution: 192dpi) {
+		spriteImage($retina_sprite)
+		spriteBackgroundSize($normal_sprite)
+	}
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
+
+// The `retinaSprites` mixin generates a CSS rule and media query for retina groups
+// This yields the same output as CSS retina template but can be overridden in Stylus
+//
+// retinaSprites($retina_groups)
+
+retinaSprites($retina_groups) {
+	for $retina_group in $retina_groups {
+		$sprite_name = $retina_group[0];
+		.{$sprite_name} {
+			retinaSprite $retina_group
+		}
+	}
+}

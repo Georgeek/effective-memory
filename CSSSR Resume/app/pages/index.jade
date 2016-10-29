@@ -1,0 +1,137 @@
+doctype html
+html
+	head
+		title Georgeek resume
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic")
+		link(rel="stylesheet", href="assets/styles/jquery-ui.min.css")
+		link(rel="stylesheet", href="assets/styles/app.min.css")
+	body
+		.container
+			header
+				.img-csssr-logo
+
+				.img-top-secret
+
+			section
+				.img-main-title
+				.main-data
+					.main-data__wrap
+						span.main-data__title Полное ФИО
+						.main-data__text
+							p Мадьяров Георгий Тимурович
+					.main-data__wrap
+						span.main-data__title Год рождения
+						.main-data__text 
+							p 1988
+					.main-data__wrap
+						span.main-data__title Место жительства
+						.main-data__text 
+							p г.Иркутск, Россия 
+					.main-data__wrap
+						span.main-data__title Skype
+						.main-data__text 
+							p egor.madiarov
+					.main-data__wrap
+						span.main-data__title Почта
+						.main-data__text 
+							p egormad@gmail.com
+					
+				.skill-data
+					.skill-data__title Расскажите о себе чекбоксами
+					.skill-data__text
+						p.
+							Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантированно будете справляться.
+					.skill-data__form
+						mixin skill(id, attr)
+							- var test = "test"
+							.skill-data__block__wrap
+								input(id="#{id}", type="checkbox", name="skills", value="", class="skill-data__block__input")&attributes(attributes)= name
+								label(for="#{id}" class="skill-data__block__label")= attr							
+						mixin link(href, name)
+							a(class!=attributes.class href=href)= name
+
+						.skill-data__block
+							+skill("bem", "БЭМ/OOCSS")(checked)
+							+skill("jade", "Pug (Jade)")(checked)
+							+skill("sass", "Stylus/LESS/SASS")(checked)
+							+skill("svg", "Работаю с SVG")
+							+skill("style", "Верстаю семантично")
+							+skill("ally", "Accessibility (A11Y)")
+							+skill("js", "ES2015/ES2016")
+						.skill-data__block
+							+skill("gulp", "Gulp/GRUNT")(checked)
+							+skill("webpack", "Webpack")
+							+skill("webgl", "Дружу с WebGL")
+							+skill("jq", "jQuery")(checked)
+							+skill("angular", "Знаю/изучаю Angular")
+							+skill("react", "Знаю/изучаю React")
+							+skill("nodejs", "Знаю/изучаю Node.js")(checked)
+						.skill-data__block
+							+skill("git", "Использую Git")(checked)
+							.skill-data__block__wrap
+								input(id="norm", type="checkbox", name="skills", value="", class="skill-data__block__input" checked="checked")
+								label(for="norm" class="skill-data__block__label" ) С глазомером #[span(id="all") все] #[span(id="OK") ок]
+							.skill-data__block__wrap
+								input(id="blogger", type="checkbox", name="skills", value="", class="skill-data__block__input")
+								label(for="blogger" class="skill-data__block__label") Читаю #[a(href="http://blog.csssr.ru") blog.csssr.ru]
+							+skill("lazy", "Я ленивый(-ая)")
+							+skill("notbad", "У меня хороший английский")(checked)
+				
+				.js-bar
+					.js-bar__title Уровень владения JavaScript
+					#slider
+					.js-bar__block
+						.js-bar__text.js-bar__text__0
+							p Не владею
+						.js-bar__text.js-bar__text__25
+							p Использую готовые решения
+						.js-bar__text.js-bar__text__50
+							p Использую готовые решения и умею их переделывать
+						.js-bar__text.js-bar__text__100
+							p Пишу сложный JS с нуля
+
+				.about
+					.about__title Расскажите о себе словами
+					.about__text
+						p.
+							Напишите пару предложений, чем Вас привлекла наша вакансия и чего Вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически
+					.about__story
+						p.
+							Так уж вышло, что все мои друзья - программисты (и уехали из страны :( ). В начале своего пути (март 2016) в голове не укладывалось, как в 28 лет, гуманитарию, можно научиться программировать? Упорство и регулярные тренировки сломали этот барьер. Всегда стараюсь делать работу качественно и усваиваю ошибки. Вижу себя front-end разработчиком, хочу научиться уверенно использовать JS.
+				
+				.plans
+					.plans__title Какие у Вас планы на будущее?
+					.plans__text
+						p.
+							Этот ответ ни на что не повлияет. Не беда, если в будущем Ваши планы поменяются.
+					.plans__form
+						mixin plan(id, attr, galka)
+							input(id="#{id}", type="radio", name="plans", value="", class="plans__input")&attributes(attributes)= name
+							label(for="#{id}", class="plans__label")= attr
+						+plan('verstka',"Верстать")
+						+plan('skillJs',"Прокачиваться в JS")(checked)
+						+plan('PMI',"Менеджерство")
+						+plan('other',"Другое")
+
+			footer
+				.date
+					.date__wrap
+						span.date__title Дата заполнения
+						.date__text 
+							p 29.10.2016
+
+
+		script(src="assets/scripts/jquery-3.1.1.js")
+		script(src="assets/scripts/jquery-ui.min.js")
+		script(src="assets/scripts/app.min.js")
+			
+
+
+//- extends /blocks/layout-default/layout-default
+
+//- block head
+//- 	- var pageTitle = 'CSSSR Project Template';
+
+//- block content
