@@ -1,0 +1,19 @@
+.plans
+	.plans__title
+		h2.subtitle Какие у Вас планы на будущее?
+	.plans__text
+		p.description.
+			Этот ответ ни на что не повлияет. Не беда, если в будущем Ваши планы поменяются.
+	.plans__form
+		mixin plan(id, attr, galka)
+			input(class='plans__input' 
+					id='#{id}' 
+					type='radio' 
+					name='plans')&attributes(attributes)= name
+			label(class='plans__label' 
+					for='#{id}')= attr
+
+		+plan('verstka','Верстать')
+		+plan('skillJs','Прокачиваться в JS')(checked)
+		+plan('PMI','Менеджерство')
+		+plan('other','Другое')

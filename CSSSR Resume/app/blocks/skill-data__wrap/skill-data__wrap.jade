@@ -1,0 +1,31 @@
+mixin skill(skilldata)
+	.skill-data__block
+		each item in skilldata
+			.skill-data__block__wrap
+				if (item[2] === true)
+					input(class='skill-data__block__input' 
+							id='#{item[0]}'
+							type='checkbox' 
+							checked)
+					label(class='skill-data__block__label'
+							for='#{item[0]}')= item[1]
+				else if (item[0] == "norm")
+					input(class='skill-data__block__input' 
+							id='#{item[0]}' 
+							type='checkbox' 
+							checked)
+					label(class='skill-data__block__label' 
+							for='#{item[0]}') С глазомером #[span(id='all') все] #[span(id='ok') ок]
+				else if (item[0] == "blogger")
+					input(id='#{item[0]}' 
+							type='checkbox' 
+							name='skills' 
+							class='skill-data__block__input')
+					label(for='#{item[0]}' 
+							class='skill-data__block__label') Читаю #[a(href='http://blog.csssr.ru') blog.csssr.ru]
+				else
+					input(class='skill-data__block__input'
+							id='#{item[0]}'
+							type='checkbox') 
+					label(class='skill-data__block__label'
+							for='#{item[0]}')= item[1]

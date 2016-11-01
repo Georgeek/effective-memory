@@ -1,6 +1,9 @@
-// import svg4everybody from 'svg4everybody';
-// import $ from 'jquery';
+import svg4everybody from 'svg4everybody';
+import $ from 'jquery';
 
-// $(() => {
-// 	svg4everybody();
-// });
+import '../blocks/js-bar/js-bar.js';
+
+$(() => {
+	svg4everybody();
+});
+

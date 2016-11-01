@@ -1,0 +1,181 @@
+header, main, nav, .container, ul, h1, p, a {
+  padding: 0;
+  margin: 0 auto;
+  content: none; }
+
+a, p {
+  font-size: 14px;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+h1 {
+  font-size: 40px;
+  border-left: 4px solid #C2A370;
+  padding-left: 25px;
+  margin: 150px 0 80px 0; }
+
+.container {
+  max-width: 940px; }
+
+.btn {
+  color: #fff;
+  background: #C2A370;
+  margin: 75px 0;
+  padding: 15px 70px; }
+
+.btn:hover {
+  background: #d1ae80;
+  color: #fff; }
+
+#input_search {
+  background: #323232;
+  margin: 80px 0;
+  padding: 15px 43px;
+  border-radius: 3px; }
+
+.phone_img {
+  height: 16px;
+  margin-right: 5px; }
+
+nav {
+  background: #323232; }
+  nav .container .col-md-6 {
+    padding: 0; }
+    nav .container .col-md-6 ul {
+      list-style: none; }
+  nav .container .col-md-3 {
+    text-align: center; }
+  nav .container #login {
+    text-align: right; }
+    nav .container #login p {
+      margin-right: 0; }
+    nav .container #login a {
+      margin-right: 0; }
+  nav .container .col-md-3 p, nav .container .col-md-3 a {
+    color: #fff;
+    padding: 15px 0 15px 15px;
+    margin: 0 15px; }
+  nav ul li {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 0;
+    margin: 0 15px; }
+  nav ul a {
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    text-decoration: none; }
+
+header .logo {
+  margin: 35px 0; }
+header .cart_header {
+  height: 14px; }
+header .logo-right {
+  text-align: right;
+  background: url(../img/cart_header_bg.png) no-repeat center left;
+  background-size: 40%; }
+header p {
+  text-align: center; }
+header .test-1 {
+  background: url(../img/cart_header_bg.png) no-repeat;
+  background-size: 100%;
+  border-top: 1px solid #C2A370;
+  border-left: 1px solid #C2A370;
+  border-bottom: 1px solid #C2A370;
+  border-radius: 3px;
+  padding: 10px 25px;
+  float: left;
+  color: #fff; }
+header .test-2 {
+  border: 1px solid #C2A370;
+  border-radius: 3px;
+  padding: 10px 25px; }
+
+main p {
+  padding: 35px 0; }
+main .introduction {
+  background: url(../img/engine_bg.png) no-repeat center center;
+  background-size: 40%;
+  background-position: 80% 50%; }
+  main .introduction h1 {
+    margin: 150px 0 0 0; }
+  main .introduction .input-group {
+    width: 100%; }
+    main .introduction .input-group .form-control {
+      width: 80%; }
+    main .introduction .input-group .search {
+      background: url(../img/loop_search_top.png) no-repeat center;
+      background-size: 60%;
+      background-color: #C2A370;
+      padding: 9px 20px;
+      border: 1px solid #C2A370; }
+main .brand-logos .brands {
+  text-align: center;
+  background: #323232; }
+  main .brand-logos .brands .logos {
+    margin-top: 75px; }
+  main .brand-logos .brands .row {
+    margin: 15px; }
+    main .brand-logos .brands .row div {
+      height: 150px; }
+      main .brand-logos .brands .row div img {
+        max-height: 150px;
+        max-width: 230px;
+        line-height: 5em; }
+main .about .volvo_snow {
+  height: 550px; }
+main .about #about_desc {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  main .about #about_desc div p {
+    padding: 0; }
+  main .about #about_desc div .img_desc {
+    margin-right: 15px;
+    height: 100%;
+    width: 50px; }
+  main .about #about_desc a {
+    margin: 0 auto 0 0;
+    padding: 15px 30px; }
+main .respond {
+  margin-top: 180px;
+  background: #323232;
+  color: #fff; }
+  main .respond .carousel {
+    margin-bottom: 50px; }
+    main .respond .carousel p {
+      padding: 10px 5px;
+      margin: 0 auto; }
+main .howto {
+  margin-top: 50px; }
+  main .howto #howtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    main .howto #howtos img {
+      height: 250px; }
+  main .howto .col-md-12 {
+    text-align: center; }
+
+footer {
+  margin: 220px 0 115px 0; }
+  footer .col-md-3 p {
+    text-align: center; }
+  footer .col-md-4 {
+    text-align: right; }
+  footer .input-group .form-control {
+    border: 1px solid #C2A370;
+    width: 80%; }
+  footer .search {
+    background: url(../img/loop_search_top.png) no-repeat center;
+    background-size: 60%;
+    background-color: #C2A370;
+    padding: 9px 20px;
+    border: 1px solid #C2A370;
+    left: 0; }
+
+/*# sourceMappingURL=main.css.map */
