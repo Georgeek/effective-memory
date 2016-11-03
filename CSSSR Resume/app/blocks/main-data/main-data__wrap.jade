@@ -1,0 +1,5 @@
+mixin datas(data)
+	each item in data
+		.main-data__wrap
+			span(class='main-data__title')= item[0]
+			.main-data__text: p.courier= item[1]
