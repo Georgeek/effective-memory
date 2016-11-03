@@ -1,0 +1,9 @@
+include ../skill-data__wrap/skill-data__wrap
+
+mixin skill-block()
+	.skill-data__block
+		+skill(getData('skill-base1'))
+	.skill-data__block
+		+skill(getData('skill-base2'))
+	.skill-data__block
+		+skill(getData('skill-base3'))

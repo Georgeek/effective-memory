@@ -1,3 +1,5 @@
+include ../skill-data__block/skill-data__block
+
 .skill-data
 	.skill-data__title 
 		h2.subtitle Расскажите о себе чекбоксами
@@ -5,6 +7,4 @@
 		p.description.
 			Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантированно будете справляться.
 	.skill-data__form
-		+skill(getData('skill-base1'))
-		+skill(getData('skill-base2'))
-		+skill(getData('skill-base3'))
+		+skill-block()

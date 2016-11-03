@@ -1,0 +1,8 @@
+mixin plan(plans)
+	each item in plans
+		input(class='plans__input' 
+				id='#{item[0]}' 
+				type='radio' 
+				checked != item[2])
+		label(class='plans__label' 
+				for='#{item[0]}')!= item[1]

@@ -1,4 +1,3 @@
-include ../blocks/main-data/main-data
 include ../blocks/skill-data__wrap/skill-data__wrap
 
 head
@@ -9,8 +8,7 @@ head
 				include ../blocks/header/header
 			section
 				.img-main-title
-				.main-data
-					+datas(getData('data'))
+				include ../blocks/main-data/main-data
 				include ../blocks/skill-data/skill-data
 				include ../blocks/js-bar/js-bar
 				include ../blocks/about/about
