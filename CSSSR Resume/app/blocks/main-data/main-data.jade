@@ -1,4 +1,6 @@
 include ../main-data/main-data__wrap
 
-.main-data
-	+datas(getData('data'))
+mixin main-data()
+	.img-main-title
+	+b.main-data&attributes(attributes)
+		+datas(getData('data'))

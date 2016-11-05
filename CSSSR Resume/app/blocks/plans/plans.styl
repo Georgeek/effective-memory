@@ -1,13 +1,10 @@
 .plans
-	&__title
-		{$margin_title}
 	&__form
 		margin 20px 0 0 30px
 	&__input
 		display none
 	&__input[type='radio']:checked + .plans__label:before
-		width 27px
-		height 29px
+		size(27px, 29px)
 		background-position -57px -7px
 	&__label
 		position relative
@@ -17,8 +14,7 @@
 		position absolute
 		top -2px
 		left -30px
-		width 27px
-		height 29px
+		size(27px, 29px)
 		content ''
 		background url(../images/sprites/icons.png)
 		background-position -8px -7px

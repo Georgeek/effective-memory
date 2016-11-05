@@ -1,21 +1,22 @@
-include ../blocks/skill-data__wrap/skill-data__wrap
+include ../blocks/section/section
 
-head
-	include ../blocks/head/head
-	body
-		.container
-			header
-				include ../blocks/header/header
-			section
-				.img-main-title
-				include ../blocks/main-data/main-data
-				include ../blocks/skill-data/skill-data
-				include ../blocks/js-bar/js-bar
-				include ../blocks/about/about
-				include ../blocks/plans/plans
-			footer
-				include ../blocks/date/date
-		script(src='assets/scripts/jquery-3.1.1.js')
-		script(src='assets/scripts/jquery-ui.min.js')
-		script(src='assets/scripts/app.min.js')
-			
+include ../blocks/main-data/main-data
+include ../blocks/skill-data/skill-data
+include ../blocks/js-bar/js-bar
+include ../blocks/about/about
+include ../blocks/plans/plans
+
+
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'CSSSR Resume George Madiarov';
+
+//- 
+//- block section
+
+//- 		script(src='assets/scripts/jquery-3.1.1.js')
+//- 		script(src='assets/scripts/jquery-ui.min.js')
+//- 		script(src='assets/scripts/app.min.js')
+//- 			

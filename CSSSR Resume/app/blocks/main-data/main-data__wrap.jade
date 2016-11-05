@@ -1,5 +1,6 @@
 mixin datas(data)
 	each item in data
-		.main-data__wrap
-			span(class='main-data__title')= item[0]
-			.main-data__text: p.courier= item[1]
+		+e.wrap
+			p.courier 
+				span(class='title description')= item[0]
+				= item[1]
