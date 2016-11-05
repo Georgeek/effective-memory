@@ -1,5 +1,8 @@
-.date
-	.date__wrap
-		span.date__title Дата заполнения
-		.date__text 
-			p.courier 29.10.2016
+mixin date()
+	+b.date&attributes(attributes)
+		+e.wrap
+			+courier()
+				+title() Дата заполнения
+				| 04.11.2016
+
+				

@@ -1,10 +1,9 @@
 include ../plans/plans__form
 
-.plans
-	.plans__title
-		h2.subtitle Какие у Вас планы на будущее?
-	.plans__text
-		p.description.
-			Этот ответ ни на что не повлияет. Не беда, если в будущем Ваши планы поменяются.
-	.plans__form
+mixin plans()
+	+b.plans&attributes(attributes)
+		+subtitle()
+				| Какие у Вас планы на будущее?
+		+description()
+				| Этот ответ ни на что не повлияет. Не беда, если в будущем Ваши планы поменяются.ddd
 		+plan(getData('plan-base'))
