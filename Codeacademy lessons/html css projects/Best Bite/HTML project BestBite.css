@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+}
+h1 {
+  margin: 0 auto;
+}
+h2 {
+  font-size: 60px;
+  color: #fff;
+  margin: 0 auto;
+}
+h3 {
+  font-size: 34px;
+}
+h4 {
+  font-size: 25px;
+  color: #d8192f;
+  padding: 20px;
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  margin: 0 auto;
+  padding: 40px;
+}
+.nav {
+  float: right;
+  width: 340px;
+}
+
+.nav-pills li a {
+  color: #d8192f;
+}
+
+.nav-pills li.active a,
+.nav-pills li a:hover,
+.section .btn:hover {
+  background-color:rgba(216,25,47,1);
+  box-shadow:0 2px 4px rgba(0,0,0,.5); 
+  color:#fff;
+}
+
+
+/* Jumbotron */
+.jumbotron {
+  background: url(https://s3.amazonaws.com/codecademy-content/projects/bestbite/bg.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+}
+.jumbotron h2 {
+  text-align: right;
+}
+.jumbotron h2:first-child {
+  margin: 120px 0 0;
+}
+
+
+/* Banner */
+.banner {
+  text-align: center;
+  margin: 40 auto;
+  padding: 20px 0;
+}
+
+.banner {
+  background-color:#36343f;
+  height:180px; 
+  color: #fff;
+}
+.btn {
+  font-size: 20px;
+  background-color: rgba(216,25,47,.5);
+  border: 0;
+  color: #fff;
+}
+/* Section */
+.section {
+  padding-top: 40px;
+}
+.page-header {
+  margin: 40px 0 20px;
+}
+.section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 7px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding: 40px 0 80px 0;
+  background-color: #eeeeee;
+}
+.footer p {
+  float: left;
+  width: 33%;
+}
+.footer a {
+  color: red;
+  text-decoration: none;
+}
+.a-center {
+  text-align: center;
+}
+.a-right {
+  text-align: right;
+}
+
+
+/* Media Queries */
+@media (max-width: 680px) {
+  .header h1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .nav {
+    float: none;
+    margin: 0 auto;
+  }
+  .banner {
+    height: 220px;
+  }
+
+  .nav-pills li:first-child a  {
+    margin-left: 0;
+  }
+}
