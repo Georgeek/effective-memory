@@ -1,0 +1,119 @@
+div {
+    border-radius: 2px;
+    background-color: #e0c9a7;
+}
+#header {
+    height: 50;
+    width: 96%;
+    margin-top: -20px;
+    background-color: #98c601;
+    position: fixed;
+    z-index: 1;
+}
+#name {
+    float: left;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    padding: 7px;
+}
+#email {
+    float: right;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    padding: 7px;
+    
+}
+a:hover {
+    font-weight: bold;
+}
+.left {
+    height: 400px;
+    width: 15%;
+    background-color: #597f52;
+    float: left;
+    margin: 50px 0 5px 10%;
+    position: relative;
+}
+
+/*main div*/
+.resume {
+    height: 400px;
+    width: 65%;
+    background-color: #8ba897;
+    margin: 50px 10% 5px 0;
+    float: right;
+    position: relative;
+}
+.information {
+    width: 50%;
+    float: left;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    background-color: #8ba897;
+    text-align: left;
+    color: #ffffff;
+    padding: 0 0 0 10px;
+}
+.picture {
+    width: 30%;
+    right: 40px;
+    background-color: #8ba897;
+    color: #ffffff;
+    padding: 0 0 0 20px;
+    float: right;  
+}
+.right p {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    color: #ffffff;
+    padding: 0 0 0 30px;
+}
+/*main div li and ul*/
+ul {
+    font-family: Verdana, sans-serif;
+    color: #ffffff;
+}
+li {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    color: #ffffff;
+    padding: 2px 0 0 0;
+    list-style-type: square;
+}
+/* div with picture in MAIN div */
+.family {
+    float: right;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    padding: 5px;
+    border: 2px dashed #ff0000; 
+}
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+#footer {
+    margin: 0 0 0 10%;
+    height: 30px;
+    width: 81.5%;
+    background-color: #d37601;
+    clear: both;
+}
+#footer p {
+    padding: 7px;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    text-align: right;
+    color: #ffffff;
+}
