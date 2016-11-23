@@ -1,0 +1,40 @@
+footer {
+  background: #1e1e1e;
+  color: #f4f4f4; }
+  footer .row {
+    margin-top: 35px;
+    margin-bottom: 35px; }
+  footer .img-logo {
+    padding: 20px 30px; }
+  footer .img-logo:before {
+    background: url(../img/footer-img-logo.png) no-repeat center center;
+    top: -10px; }
+  footer li {
+    display: block; }
+  footer li:first-child a {
+    padding-top: 20px; }
+  footer a {
+    padding: 10px 0 0 0; }
+    footer a:hover {
+      color: #69a3b3;
+      text-decoration: none; }
+  footer .social li {
+    display: inline-block;
+    margin-right: 15px; }
+  footer .social .social-ico:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: relative;
+    float: left;
+    right: 0px; }
+  footer .social .vk:before {
+    background: url(../img/footer-vk-ico.png) no-repeat center center; }
+  footer .social .fb:before {
+    background: url(../img/footer-fb-ico.png) no-repeat center center; }
+  footer .social .twitter:before {
+    background: url(../img/footer-twitter-ico.png) no-repeat center center; }
+  footer .social .google:before {
+    background: url(../img/footer-google-ico.png) no-repeat center center; }
+
+/*# sourceMappingURL=footer.css.map */

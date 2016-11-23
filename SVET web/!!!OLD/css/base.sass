@@ -1,0 +1,100 @@
+@import 'header/nav-bar/navbar'
+@import 'header/nav-bar/navsearch'
+@import 'footer/footer'
+@import 'main/carousel'
+@import 'main/bottom-section'
+@import 'main/content'
+@import 'main/content-goods'
+
+$text-color: #f4f4f4
+$text-main-section: #000
+$text-hover: #69a3b3
+$bg-color: #1e1e1e
+$font-family: 'Roboto', serif
+
+body, header, nav, .container
+	padding: 0
+	margin: 0 auto
+	font-family: $font-family
+	font-size: 13px
+
+.container
+	max-width: 1170px
+ul 
+	padding: 0
+	margin: 0
+
+p, a, li
+	font-size: 13px
+	color: $text-color
+	list-style: none
+	display: inline-block
+	
+	a:hover
+		color: $text-hover
+		text-decoration: none
+
+a, p
+	padding: 14px 10px
+	margin: 0
+
+h4
+	font-size: 21px
+	color: $text-color
+main
+	h4, p
+		color: $text-main-section
+		padding: 0	
+
+.img-logo
+	position: relative
+	text-align: right
+
+.img-logo:before
+	content: ""
+	height: 50px
+	width: 190px
+	top: 15px
+	left: 0px
+	position: absolute
+.header-cart
+	width: 80px
+	background-color: $blue-color
+	color: $text-color
+	position: relative
+	mask: url(../img/shopping-cart.svg)
+	// &:before
+		
+	&:hover
+		background-color: $text-hover
+		color: $text-color
+.shop-cart
+	fill: white
+	height: 1.5em
+	position: absolute
+	left: 1.1em
+	top: 1.7em
+	padding-right: 0.2em
+
+// block component
+.btn
+	font-size: 1.2em
+	border: 0px
+	padding-left: 20px
+	border-radius: 0
+	&:before
+		content: ""
+		width: 20px
+		height: 20px
+		position: relative
+		float: left
+		right: 0px
+
+// block modifier
+.btn-big
+	height: 80px
+.btn-mid
+	height: 40px
+	border-radius: 4px
+
+// block element - text padding, font-size, border-radius around text

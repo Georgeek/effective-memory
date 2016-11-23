@@ -1,0 +1,17 @@
+.content {
+  margin: 20px 0 40px; }
+  .content p {
+    margin-bottom: 5px;
+    width: 100%; }
+  .content h4 {
+    padding-left: 10px;
+    margin-bottom: 30px; }
+  .content .main-catalog {
+    display: block; }
+    .content .main-catalog a {
+      padding: 20px 0 20px 5px;
+      background-color: #efefef;
+      color: #2177ec;
+      margin-bottom: 5px; }
+
+/*# sourceMappingURL=_content.css.map */

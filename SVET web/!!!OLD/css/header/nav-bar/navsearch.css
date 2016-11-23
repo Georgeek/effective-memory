@@ -1,0 +1,32 @@
+.nav-search {
+  background-color: #eeeeee; }
+  .nav-search .col-md-3 {
+    width: 22%; }
+
+input {
+  background-color: #fff;
+  padding: 9px 20px;
+  width: 62%;
+  margin: 20px 0; }
+
+.nav-search .img-logo {
+  padding: 40px 109px;
+  float: left; }
+.nav-search .img-logo:before {
+  background: url(../img/logo-realled-top.png) no-repeat center center; }
+
+.header-favorite {
+  background: transparent;
+  width: 140px;
+  color: #2177ec; }
+  .header-favorite:before {
+    background: url(../img/spritesheet.png);
+    background-position: -533px -4px;
+    width: 20px; }
+  .header-favorite:hover {
+    color: #69a3b3; }
+    .header-favorite:hover:before {
+      background-position: -563px -4px;
+      width: 20px; }
+
+/*# sourceMappingURL=navsearch.css.map */
