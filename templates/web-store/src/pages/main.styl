@@ -1,0 +1,76 @@
+$grey_1= #333
+$grey_wrap= #ccc
+$grey_wrap2= #a0a0a0
+$grey_bg= #f5f5f5
+$grey_bg2= #f2f2f2
+
+body
+	margin 0
+	font-size 1em
+	font-family 'Open Sans', Arial, sans-serif
+	background #f2f2f2
+	color #333 
+
+.container
+	margin 0 auto
+	width 70%
+	// border 1px solid $grey_wrap
+a
+	text-decoration none
+	color #000
+nav
+	background-color $grey_1
+
+ul
+	margin 0
+	padding 0
+	display flex
+	flex-wrap wrap
+	li
+		// margin-right 10px
+		padding-top 10px
+		padding-bottom 10px
+		list-style none
+		text-align left
+		a
+			color #fff
+			padding 10px
+			&:hover
+				color blue
+		&:first-child
+			padding-left 0
+			a
+				padding-left 0
+		&:last-child
+			margin 0
+			padding-right 0
+			a
+				padding-right 0
+
+ul.nav-right
+	justify-content flex-end
+	
+.wrap
+	display flex
+	justify-content space-between
+	align-items baseline
+	
+.logo
+	margin 3px
+	padding 10px
+	width 15%
+	background $grey_1
+	text-align center
+	color #fff
+.button
+	// height 100%
+	width 5%
+	padding 15px
+	cursor pointer
+	&:hover
+		background blue
+
+header
+	background $grey_wrap
+	form
+		width 60%
