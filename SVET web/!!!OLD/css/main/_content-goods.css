@@ -1,0 +1,13 @@
+.content-goods .caption h4 {
+  color: #2177ec; }
+.content-goods .thumbnail {
+  border: none;
+  margin-bottom: 15px; }
+.content-goods .advertisment {
+  background-color: #90C3D4;
+  border: 1px solid #16C1FA;
+  height: 200px; }
+.content-goods .glyphicon {
+  color: red; }
+
+/*# sourceMappingURL=_content-goods.css.map */

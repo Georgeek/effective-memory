@@ -1,0 +1,13 @@
+nav {
+  background-color: #1e1e1e; }
+  nav p:before {
+    content: "8 800 111 22 34"; }
+  nav .header-menu li:first-child a {
+    padding-left: 0; }
+  nav .nav-right {
+    text-align: right; }
+    nav .nav-right li:last-child p {
+      padding-right: 0;
+      font-size: 15px; }
+
+/*# sourceMappingURL=navbar.css.map */

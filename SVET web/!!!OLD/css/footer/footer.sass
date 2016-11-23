@@ -1,0 +1,50 @@
+$text-color: #f4f4f4
+$text-hover: #69a3b3
+$bg-color: #1e1e1e
+
+footer
+	.row
+		margin-top: 35px
+		margin-bottom: 35px
+	background: $bg-color
+	color: $text-color
+	.img-logo
+		padding: 20px 30px
+	.img-logo:before
+		background: url(../img/footer-img-logo.png) no-repeat center center
+		top: -10px
+
+	li
+		display: block
+	li:first-child
+		a
+			padding-top: 20px
+	a
+		padding: 10px 0 0 0
+		&:hover
+			color: $text-hover
+			text-decoration: none
+	.social
+		li
+			display: inline-block
+			margin-right: 15px
+		.social-ico
+			&:before
+				content: ""
+				width: 25px
+				height: 25px
+				position: relative
+				float: left
+				right: 0px
+		.vk
+			&:before
+				background: url(../img/footer-vk-ico.png) no-repeat center center		
+		.fb
+			&:before
+				background: url(../img/footer-fb-ico.png) no-repeat center center
+		.twitter
+			&:before
+				background: url(../img/footer-twitter-ico.png) no-repeat center center
+		.google
+			&:before
+				background: url(../img/footer-google-ico.png) no-repeat center center
