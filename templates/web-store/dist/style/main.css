@@ -14,38 +14,38 @@ a {
   color: #000;
 }
 nav {
-  background-color: #333;
+  background-color: rgba(51,51,51,0.5);
 }
-ul {
+nav ul {
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-ul li {
+nav ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   list-style: none;
   text-align: left;
 }
-ul li a {
+nav ul li a {
   color: #fff;
   padding: 10px;
 }
-ul li a:hover {
-  color: #00f;
+nav ul li a:hover {
+  color: rgba(67,31,242,0.6);
 }
-ul li:first-child {
+nav ul li:first-child {
   padding-left: 0;
 }
-ul li:first-child a {
+nav ul li:first-child a {
   padding-left: 0;
 }
-ul li:last-child {
+nav ul li:last-child {
   margin: 0;
   padding-right: 0;
 }
-ul li:last-child a {
+nav ul li:last-child a {
   padding-right: 0;
 }
 ul.nav-right {
@@ -54,27 +54,91 @@ ul.nav-right {
 .wrap {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
 .logo {
   margin: 3px;
   padding: 10px;
   width: 15%;
-  background: #333;
+  height: 35px;
+  background: rgba(51,51,51,0.5);
   text-align: center;
   color: #fff;
 }
 .button {
-  width: 5%;
-  padding: 15px;
+  padding: 20px 15px 10px 15px;
+  width: 7%;
   cursor: pointer;
+  text-align: center;
+  verical-align: center;
 }
 .button:hover {
-  background: #00f;
+  background: rgba(67,31,242,0.6);
 }
 header {
   background: #ccc;
 }
 header form {
-  width: 60%;
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+}
+header input {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  height: 30px;
+}
+main .block__carousel {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 200px;
+  width: 100%;
+  background: #ccc;
+}
+main .shop__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.catalog {
+  width: 30.3%;
+}
+.catalog .wrap {
+  display: flex;
+  flex-direction: column;
+}
+.catalog .wrap .element {
+  margin-bottom: 4px;
+  padding: 10px;
+  height: 35px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background: rgba(51,51,51,0.5);
+}
+.catalog .wrap .element:hover {
+  background: rgba(67,31,242,0.6);
+}
+.catalog .wrap .element span {
+  padding: 0 10px;
+}
+.popular {
+  width: 69.7%;
+}
+.popular .wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.popular .wrap .element {
+  margin: 0 10px 10px 0;
+  width: 233px;
+  height: 270px;
+  background: #ccc;
 }

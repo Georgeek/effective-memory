@@ -3,6 +3,7 @@ var gulp = require('gulp');
 	stylus = require('gulp-stylus');
 	connect = require('gulp-connect');
 	concat = require('gulp-concat');
+	plumber = require('gulp-plumber');
 
 gulp.task('connect', function() {
 	connect.server({
@@ -16,6 +17,7 @@ gulp.task('connect', function() {
 
 gulp.task('pug', function() {
 	gulp.src('./src/pages/*.pug')
+		.pipe(plumber())
 		.pipe(pug({
 			pretty: true
 		}))
@@ -25,6 +27,7 @@ gulp.task('pug', function() {
 
 gulp.task('stylus', function() {
 	gulp.src('./src/pages/*.styl')
+		.pipe(plumber())
 		.pipe(stylus())
 		.pipe(gulp.dest('dist/style'))
 		.pipe(connect.reload());
@@ -32,6 +35,7 @@ gulp.task('stylus', function() {
 
 gulp.task('concat', function() { // TODO опеределить варианты импорта различных библиотек
 	gulp.src('./src/pages/*.js') // TODO переделать task под новый вариант
+		.pipe(plumber())
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(connect.reload());
