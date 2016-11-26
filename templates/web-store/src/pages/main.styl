@@ -4,6 +4,9 @@ $grey_wrap2= #a0a0a0
 $grey_bg= #f5f5f5
 $grey_bg2= #f2f2f2
 $blue= rgba(67, 31, 242, .6)
+$mobile_width= 450px
+$tablet_width= 850px
+$1024_width= 1150px
 
 body
 	margin 0
@@ -14,28 +17,57 @@ body
 
 .container
 	margin 0 auto
-	width 70%
+	max-width 70%
+	@media (max-width: $1024_width)
+		max-width 80%
+	@media (max-width: $tablet_width)
+		max-width 90%
 a
 	text-decoration none
 	color #000
 nav
 	background-color $grey_1
+	.logo
+		display none
+		@media (max-width: $tablet_width)
+			margin 0
+			padding 15px 0
+			width 100%
+			display block
+			text-align center
+		@media (max-width: $mobile_width)
+			margin 0
+			padding 15px 0
+			width 100%
+			display block
 	ul
 		margin 0
 		padding 0
 		display flex
 		flex-wrap wrap
+		@media (max-width: $tablet_width)
+			flex-direction column
+		@media ($mobile_width)
+			flex-direction column
 		li
-			// margin-right 10px
 			padding-top 10px
 			padding-bottom 10px
 			list-style none
 			text-align left
+			@media (max-width: $tablet_width)
+				padding-top 5px
+			@media (max-width: $mobile_width)
+				padding-top 5px
+				padding-bottom 5px
 			a
 				color #fff
 				padding 10px
 				&:hover
 					color $blue
+				@media (max-width: $tablet_width)
+					padding 0
+				@media (max-width: $mobile_width)
+					padding 0
 			&:first-child
 				padding-left 0
 				a
@@ -48,10 +80,15 @@ nav
 
 ul.nav-right
 	justify-content flex-end
+	@media (max-width: $1024_width)
+		justify-content flex-end
+	@media (max-width: $tablet_width)
+		justify-content flex-start
+	@media (max-width: $mobile_width)
+		justify-content flex-start
 .wrap
 	display flex
 	justify-content space-between
-	// align-items baseline
 
 .logo
 	margin 3px
@@ -61,21 +98,46 @@ ul.nav-right
 	background $grey_1
 	text-align center
 	color #fff
+
 .button
 	padding 20px 15px 10px 15px
-	width 7%
 	cursor pointer
 	text-align center
 	verical-align center
 	&:hover
 		background $blue
+	@media (max-width: $tablet_width)
+		padding 10px 0
+		width 100%
+		flex-direction column
+	@media (max-width: $mobile_width)
+		padding 15px 0
+		width 100%
+		flex-direction column
 
 header
 	background $grey_wrap
+	.wrap
+		@media (max-width: $tablet_width)
+			flex-direction column
+		@media (max-width: $mobile_width)
+			flex-direction column
+	.logo
+		@media (max-width: $tablet_width)
+			display none
+		@media (max-width: $mobile_width)
+			display none
 	form
 		margin-left 20px
 		width 100%
 		display flex
+		justify-content flex-start
+		@media (max-width: $tablet_width)
+			flex-direction column
+			margin-left 0
+		@media (max-width: $mobile_width)
+			flex-direction column
+			margin-left 0
 	input
 		margin-top 10px
 		margin-bottom 5px
@@ -85,7 +147,14 @@ header
 		border-top-left-radius 3px
 		border-bottom-left-radius 3px
 		height 30px
-
+		// @media (max-width: $1024_width)
+		// 	width 50%
+		@media (max-width: $tablet_width)
+			flex-direction column
+			padding 0
+		@media (max-width: $mobile_width)
+			flex-direction column
+			padding 0
 main
 	.block__carousel
 		margin-top 15px
@@ -93,30 +162,61 @@ main
 		height 200px
 		width 100%
 		background $grey_wrap
+		@media (max-width: $tablet_width)
+			height 130px
+		@media (max-width: $mobile_width)
+			height 130px
 	.shop__content
 		display flex
 		flex-direction row
 		justify-content space-between
+		@media (max-width: $tablet_width)
+			flex-direction column
+		@media (max-width: $mobile_width)
+			flex-direction column
+
 .catalog
 	width 30.3%
+	@media (max-width: $tablet_width)
+		width 100%
+		text-align center
+	@media (max-width: $mobile_width)
+		width 100%
+		text-align center
 	.wrap
 		display flex
 		flex-direction column
 		.element
 			margin-bottom 4px
-			padding 10px
-			height 35px
+			padding 15px 10px
+			// height 35px
 			width 80%
 			display flex
 			justify-content space-between
-			list-style none
 			background $grey_1
+			list-style none
+			overflow hidden
+			@media (max-width: $1024_width)
+				margin 2px 0
+				padding 15px 10px
+			@media (max-width: $tablet_width)
+				margin 2px auto
+				width 100%
+			@media (max-width: $mobile_width)
+				margin 2px auto
+				width 100%
 			&:hover
 				background $blue
 			span
 				padding 0 10px
 .popular
 	width 69.7%
+	@media (max-width: $tablet_width)
+		width 100%
+		text-align center
+	@media (max-width: $mobile_width)
+		width 100%
+		text-align center
 	.wrap
 		display flex
 		flex-direction row
@@ -124,6 +224,47 @@ main
 		flex-wrap wrap
 		.element
 			margin 0 10px 10px 0
-			width 233px
+			width 31%
 			height 270px
 			background $grey_wrap
+			@media (max-width: $1024_width)
+				width 47%
+			@media (max-width: $mobile_width)
+				margin 3px auto
+				width 100%
+			.wrap
+				margin 5px
+				// height 97%
+				background $grey_bg2
+.info
+	background $grey_wrap
+	h2
+		padding-top 30px
+	p
+		margin 0
+		padding 30px 0
+footer
+	background-color $grey_1
+	// height 100px
+	.wrap
+		display flex
+		flex-direction row
+		justify-content flex-start
+		flex-wrap wrap
+		@media (max-width: $tablet_width)
+			flex-direction column
+		@media (max-width: $mobile_width)
+			flex-direction column
+		.element
+			margin 10px 10px 10px 0
+			width 23%
+			// height 270px
+			background $grey_wrap
+			@media (max-width: $tablet_width)
+				margin 5px auto
+				width 100%
+			@media (max-width: $mobile_width)
+				margin 5px auto
+				width 100%
+			&:last-child
+				margin-right 0
