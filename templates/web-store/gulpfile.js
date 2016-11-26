@@ -1,3 +1,8 @@
+// // // // // // // // // // // // //
+//
+//	СПИСОК ПАКЕТОВ
+//
+// // // // // // // // // // // // //
 var gulp = require('gulp');
 	pug = require('gulp-pug');
 	stylus = require('gulp-stylus');
@@ -5,6 +10,11 @@ var gulp = require('gulp');
 	concat = require('gulp-concat');
 	plumber = require('gulp-plumber');
 
+// // // // // // // // // // // // //
+//
+//	КОНФИГУРАЦИЯ СЕРВЕРА
+//
+// // // // // // // // // // // // //
 gulp.task('connect', function() {
 	connect.server({
 		name: '############################################# \n EGOR\'s SERVER IS RUNNING ===>',
@@ -15,6 +25,11 @@ gulp.task('connect', function() {
 	console.log('############################################# \n############################################# \n [[HELLO WORLD!! SERVER IS UP!! localhost:8000]] \n#############################################\n#############################################');
 });
 
+// // // // // // // // // // // // //
+//
+//	КОНФИГУРАЦИЯ PUG/JADE
+//
+// // // // // // // // // // // // //
 gulp.task('pug', function() {
 	gulp.src('./src/pages/*.pug')
 		.pipe(plumber())
@@ -25,6 +40,11 @@ gulp.task('pug', function() {
 		.pipe(connect.reload());
 });
 
+// // // // // // // // // // // // //
+//
+//	КОНФИГУРАЦИЯ STYLUS
+//
+// // // // // // // // // // // // //
 gulp.task('stylus', function() {
 	gulp.src('./src/pages/*.styl')
 		.pipe(plumber())
@@ -33,6 +53,11 @@ gulp.task('stylus', function() {
 		.pipe(connect.reload());
 });
 
+// // // // // // // // // // // // //
+//
+//	КОНФИГУРАЦИЯ JAVASCRIPT
+//
+// // // // // // // // // // // // //
 gulp.task('concat', function() { // TODO опеределить варианты импорта различных библиотек
 	gulp.src('./src/pages/*.js') // TODO переделать task под новый вариант
 		.pipe(plumber())
@@ -41,10 +66,20 @@ gulp.task('concat', function() { // TODO опеределить варианты
 		.pipe(connect.reload());
 });
 
+// // // // // // // // // // // // //
+//
+//	GULP WATCH
+//
+// // // // // // // // // // // // //
 gulp.task('watch', function() {
 	gulp.watch('./src/**/*.pug', ['pug']),
 	gulp.watch('./src/**/*.js', ['concat']),
 	gulp.watch('./src/**/*.styl', ['stylus'])
 });
 
+// // // // // // // // // // // // //
+//
+//	GULP DEFAULT
+//
+// // // // // // // // // // // // //
 gulp.task('default', ['pug', 'stylus' , 'concat', 'connect', 'watch']);
