@@ -1,0 +1,102 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.carousel-store {
+	position: relative;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+	margin-top: 26px;
+	background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}
+
+.carousel-inner-store {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.carousel-open-store:checked + .carousel-item-store {
+	position: static;
+	opacity: 100;
+}
+
+.carousel-item-store {
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: opacity 0.6s ease-out;
+	transition: opacity 0.6s ease-out;
+}
+
+.carousel-item-store img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.carousel-control-store {
+	background: rgba(0, 0, 0, 0.28);
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+	font-size: 40px;
+	height: 40px;
+	line-height: 35px;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	cursor: pointer;
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	text-align: center;
+	width: 40px;
+	z-index: 10;
+}
+
+.carousel-control-store.prev {
+	left: 2%;
+}
+
+.carousel-control-store.next {
+	right: 2%;
+}
+
+.carousel-control-store:hover {
+	background: rgba(0, 0, 0, 0.8);
+	color: #aaaaaa;
+}
+
+#carousel-store-1:checked ~ .control-store-1,
+#carousel-store-2:checked ~ .control-store-2,
+#carousel-store-3:checked ~ .control-store-3,
+#carousel-store-4:checked ~ .control-store-4,
+#carousel-store-5:checked ~ .control-store-5 {
+	display: block;
+}
+
+#carousel-store-1:checked ~ .control-store-1,
+#carousel-store-2:checked ~ .control-store-2,
+#carousel-store-3:checked ~ .control-store-3,
+#carousel-store-4:checked ~ .control-store-4,
+#carousel-store-5:checked ~ .control-store-5 {
+	color: #428bca;
+}
+
+#title {
+	width: 100%;
+	position: absolute;
+	padding: 0px;
+	margin: 0px auto;
+	text-align: center;
+	font-size: 27px;
+	color: rgba(255, 255, 255, 1);
+	font-family: 'Open Sans', sans-serif;
+	z-index: 9999;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.wrap
+	display: flex
+	flex-direction: row
+	justify-content: space-between

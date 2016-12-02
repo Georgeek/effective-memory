@@ -1,0 +1,29 @@
+.carousel_2
+  input.carousel_2-active#carousel_2-1(type="radio" name="carousel_2" aria-hidden="true" hidden checked="checked")
+  .carousel_2-item
+    .carousel_2-controls(aria-hidden="true")
+      label.carousel_2-control.prev(for="carousel_2-3" title="Prev") «
+      label.carousel_2-control.next(for="carousel_2-2" title="Next") »
+    img(src="http://placehold.it/1200x300/444/fff/&text=First+slide" alt="First slide")
+
+  input.carousel_2-active#carousel_2-2(type="radio" name="carousel_2" aria-hidden="true" hidden)
+  .carousel_2-item
+    .carousel_2-controls(aria-hidden="true")
+      label.carousel_2-control.prev(for="carousel_2-1" title="Prev") «
+      label.carousel_2-control.next(for="carousel_2-3" title="Next") »
+    img(src="http://placehold.it/1200x300/444/fff/&text=Second slide" alt="Second slide")
+
+  input.carousel_2-active#carousel_2-3(type="radio" name="carousel_2" aria-hidden="true" hidden)
+  .carousel_2-item
+    .carousel_2-controls(aria-hidden="true")
+      label.carousel_2-control.prev(for="carousel_2-2" title="Prev") «
+      label.carousel_2-control.next(for="carousel_2-1" title="Next") »
+    img(src="http://placehold.it/1200x300/ccc/077/&text=Third+slide" alt="Third slide")
+
+  ol.carousel_2-indicators(aria-label="Carousel_2 navigation" aria-hidden="true")
+    li
+      label.carousel_2-indicator(for="carousel_2-1" title="Jump to carousel_2 item #1") ●
+    li
+      label.carousel_2-indicator(for="carousel_2-2" title="Jump to carousel_2 item #2") ●
+    li
+      label.carousel_2-indicator(for="carousel_2-3" title="Jump to carousel_2 item #3") ●
