@@ -1,1 +1,0 @@
-'use strict';var print=function print(message){return console.log(message)};print('\u041F\u0440\u0438\u0432\u0435\u0442 Babel!!!!');
